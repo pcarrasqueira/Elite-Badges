@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuvio Badge Builder</title>
+    <link rel="icon" href="./assets/nuvio-badge-icon.svg" />
+    <link rel="stylesheet" href="./styles.css?v=nuvio-dark" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-lockup">
+            <img src="./assets/nuvio-badge-icon.svg" alt="" />
+            <h1>Nuvio Badge Builder</h1>
+          </div>
+          <p class="brand-copy">Build a clean custom preset from every known badge library.</p>
+          <div class="status-row">
+            <span id="sourceStatus">Loading sources</span>
+            <span id="libraryCount">0 badges</span>
+          </div>
+        </div>
+
+        <section class="panel source-panel" hidden>
+          <div class="panel-title">Sources</div>
+          <div id="sourceList" class="source-list"></div>
+          <div class="source-actions">
+            <input id="urlInput" class="url-input" type="url" placeholder="https://.../badges.json" />
+            <button id="addUrlButton" type="button">Add URL</button>
+          </div>
+          <label class="file-import">
+            <input id="fileInput" type="file" accept="application/json,.json" />
+            Import file
+          </label>
+        </section>
+
+        <nav id="sectionTabs" class="section-tabs" aria-label="Badge sections"></nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="toolbar">
+          <div class="toolbar-main">
+            <label class="search-box">
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Badge, pattern, source" />
+            </label>
+            <label class="search-box">
+              <span>Library</span>
+              <select id="sourceFilter"></select>
+            </label>
+            <label class="sample-box">
+              <span>Test title</span>
+              <input id="sampleInput" type="text" value="Movie.2025.2160p.NF.WEB-DL.DDP5.1.Atmos.DV.HEVC-Group" />
+            </label>
+          </div>
+          <div class="toolbar-actions">
+            <button id="selectDefaultsButton" type="button">Select defaults</button>
+            <button id="copyJsonButton" type="button">Copy JSON</button>
+            <button id="downloadJsonButton" type="button">Download</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <div class="catalog-panel">
+            <div class="section-heading">
+              <div>
+                <h2 id="activeSectionTitle">Sections</h2>
+                <p id="activeSectionMeta"></p>
+              </div>
+              <label class="toggle-line">
+                <input id="selectedOnlyToggle" type="checkbox" />
+                Selected only
+              </label>
+            </div>
+            <section class="title-preview" aria-label="Test title preview">
+              <div class="title-preview-text" id="titlePreviewText"></div>
+              <div class="title-preview-badges" id="titlePreviewBadges"></div>
+            </section>
+            <div id="conceptGrid" class="concept-grid"></div>
+          </div>
+
+          <aside class="export-panel">
+            <div class="summary-strip">
+              <div>
+                <span id="selectedCount">0</span>
+                <small>selected</small>
+              </div>
+              <div>
+                <span id="matchCount">0</span>
+                <small>matches</small>
+              </div>
+              <div>
+                <span id="issueCount">0</span>
+                <small>issues</small>
+              </div>
+            </div>
+
+            <div class="panel-title">Matches</div>
+            <div id="matchList" class="match-list"></div>
+
+            <div class="panel-title">Validation</div>
+            <div id="validationList" class="validation-list"></div>
+
+            <div class="panel-title">Export</div>
+            <textarea id="jsonOutput" class="json-output" spellcheck="false"></textarea>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <template id="conceptTemplate">
+      <article class="concept-card">
+        <div class="concept-top">
+          <div>
+            <h3></h3>
+            <p></p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" />
+            <span></span>
+          </label>
+        </div>
+        <div class="selected-preview"></div>
+        <div class="variant-list"></div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

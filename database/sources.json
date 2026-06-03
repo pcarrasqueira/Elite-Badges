@@ -1,0 +1,63 @@
+[
+  {
+    "id": "elite",
+    "name": "Elite Badges",
+    "kind": "json",
+    "url": "./badges.json"
+  },
+  {
+    "id": "betterformatter",
+    "name": "BetterFormatter presets",
+    "kind": "githubDirectory",
+    "url": "https://api.github.com/repos/9mousaa/BetterFormatter/contents/presets"
+  },
+  {
+    "id": "ngreyx1",
+    "name": "ngreyx1 badges",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json",
+    "allowRepair": true
+  },
+  {
+    "id": "wddadda",
+    "name": "wddadda gist",
+    "kind": "json",
+    "url": "https://gist.githubusercontent.com/wddadda-hub/2efc5f81606a5689febd3dad09dee8bd/raw/2bdbf808886aa6a51dae811fd73aa384121b98fb/my-badges.json"
+  },
+  {
+    "id": "badger-minimalist-v2",
+    "name": "Badger: Minimalist V2 by starkles",
+    "kind": "json",
+    "url": "https://gist.githubusercontent.com/starkles/76b38680b9580e05ca8348206b3ebba2/raw/3ecb64ac6661a5dca55574a2dec7797438e3d1b1/badges.json"
+  },
+  {
+    "id": "badger-colored",
+    "name": "Badger: Colored by nobnobz",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/fusion-tags-ume-colored.json"
+  },
+  {
+    "id": "badger-standard-ume",
+    "name": "Badger: Standard UME by nobnobz",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/fusion-tags-ume.json"
+  },
+  {
+    "id": "badger-elite-badges",
+    "name": "Badger: Elite Badges by leonevz",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/badges.json"
+  },
+  {
+    "id": "badger-gold-badges",
+    "name": "Badger: Gold Badges by k45sle",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/k45sle/NUVIO_BADGES/main/GOLD-NONAMES.json"
+  },
+  {
+    "id": "badger-minimalistic",
+    "name": "Badger: Minimalistic by nobnobz",
+    "kind": "json",
+    "url": "https://raw.githubusercontent.com/nobnobz/Omni-Template-Bot-Bid-Raiser/main/Other/fusion-tags-ume-minimalistic.json"
+  }
+]
